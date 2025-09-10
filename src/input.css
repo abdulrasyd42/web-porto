@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+.gradient-bg {
+  background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #00d9ff, #b237ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.skill-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #00d9ff, #b237ff);
+  border-radius: 0.5rem;
+  transition: width 2s ease-in-out;
+}
+
+.skill-html::before { width: 90%; }
+.skill-css::before { width: 85%; }
+.skill-js::before { width: 80%; }
+.skill-react::before { width: 75%; }
+.skill-node::before { width: 70%; }
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px) scale(1.02);
+}
